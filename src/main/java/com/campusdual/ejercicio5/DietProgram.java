@@ -39,9 +39,9 @@ public class DietProgram {
         mainLoop: do {
             System.out.println("Escriba una opción:");
             System.out.println("===================================");
-            System.out.println("1-Crear/reiniciar dieta");
-            System.out.println("2-Mostrar información de la dieta");
-            System.out.println("3-Agregar alimento al plan actual");
+            System.out.println("1-Crear/reiniciar dieta.");
+            System.out.println("2-Mostrar información de la dieta.");
+            System.out.println("3-Agregar alimento al plan actual.");
             System.out.println("4-Volver al menú principal.");
             option = Kb.getOption(1,4);
 
@@ -70,7 +70,7 @@ public class DietProgram {
 
         // Se verifica si diet es null. Si es null, significa que no se ha iniciado una dieta, por lo que muestra un mensaje de error y sale del método.
         if(this.diet==null){
-            System.out.println("Para agregar alimentos hace falta iniciar una dieta");
+            System.out.println("Para agregar alimentos hace falta iniciar una dieta.");
             return;
         }
 
@@ -82,8 +82,8 @@ public class DietProgram {
         // Se muestra un menú con dos opciones: agregar un nuevo alimento o agregar un alimento existente.
         System.out.println("Escriba una opción:");
         System.out.println("===================================");
-        System.out.println("1-Agregar un nuevo alimento");
-        System.out.println("2-Agregar un alimento ya existente");
+        System.out.println("1-Agregar un nuevo alimento.");
+        System.out.println("2-Agregar un alimento ya existente.");
 
         // Se utiliza getOption nuevamente para obtener la elección del usuario y luego se utiliza una instrucción switch para
         // manejar las dos opciones disponibles.
@@ -132,10 +132,10 @@ public class DietProgram {
                     System.out.println(i+"- "+food.getName());
                     i++;
                 }
-                System.out.println(i+"- Cancelar");
+                System.out.println(i+"- Cancelar.");
                 Integer element = Kb.getOption(1,i);
                 if(element==i){
-                    System.out.println("Cancelando alimento");
+                    System.out.println("Cancelando alimento.");
                     return;
                 }
 
@@ -160,13 +160,13 @@ public class DietProgram {
         try{
             this.diet.addFood(food,grams);
         }catch (MaxCaloriesReachedException ecal){
-            System.out.println("Se ha alcanzado el máximo valor de calorías permitido");
+            System.out.println("Se ha alcanzado el máximo valor de calorías permitido.");
         }catch (MaxCarbsReachedException ecar){
-            System.out.println("Se ha alcanzado el máximo valor de carbohidratos permitido");
+            System.out.println("Se ha alcanzado el máximo valor de carbohidratos permitido.");
         }catch (MaxFatsReachedException efat){
-            System.out.println("Se ha alcanzado el máximo valor de grasas permitido");
+            System.out.println("Se ha alcanzado el máximo valor de grasas permitido.");
         }catch (MaxProteinsReachedException epro){
-            System.out.println("Se ha alcanzado el máximo valor de proteínas permitido");
+            System.out.println("Se ha alcanzado el máximo valor de proteínas permitido.");
         }catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -183,10 +183,10 @@ public class DietProgram {
         // Se muestra un menú con cuatro opciones diferentes para crear la dieta.
         System.out.println("Escriba una opción:");
         System.out.println("===================================");
-        System.out.println("1-Dieta sin límite");
-        System.out.println("2-Dieta por calorías");
-        System.out.println("3-Dieta por macronutrientes");
-        System.out.println("4-Dieta por datos personales");
+        System.out.println("1-Dieta sin límite.");
+        System.out.println("2-Dieta por calorías.");
+        System.out.println("3-Dieta por macronutrientes.");
+        System.out.println("4-Dieta por datos personales.");
 
         // Se utiliza getOption para obtener la elección del usuario y luego se utiliza una instrucción switch para manejar
         // las cuatro opciones disponibles.
