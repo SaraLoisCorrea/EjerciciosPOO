@@ -36,13 +36,13 @@ public class DietProgram {
         Integer option;
 
         // El bucle do-while muestra un menú con cuatro opciones al usuario y utiliza el método getOption para obtener la elección del usuario, asegurándose de que sea un número entre 1 y 4.
-        do{
+        mainLoop: do {
             System.out.println("Escriba una opción:");
             System.out.println("===================================");
             System.out.println("1-Crear/reiniciar dieta");
             System.out.println("2-Mostrar información de la dieta");
             System.out.println("3-Agregar alimento al plan actual");
-            System.out.println("4-Salir del programa");
+            System.out.println("4-Volver al menú principal.");
             option = Kb.getOption(1,4);
 
             //El método switch se utiliza para realizar diferentes acciones según la opción ingresada por el usuario. Las opciones 1, 2 y 3
@@ -60,7 +60,7 @@ public class DietProgram {
                     break;
                 case 4:
                     System.out.println("Gracias por usar el programa, hasta pronto :)");
-                    break;
+                    break mainLoop;
             }
         }while(option != 4);
     }
