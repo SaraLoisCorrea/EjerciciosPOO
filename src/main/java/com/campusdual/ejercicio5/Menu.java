@@ -64,7 +64,7 @@ public class Menu {
             System.out.println("1-Seleccionar paciente.");
             System.out.println("2-Seleccionar dieta.");
             System.out.println("3-Crear un nuevo paciente.");
-            System.out.println("4-Salir del programa");
+            System.out.println("4-Salir del programa.");
             option = Kb.getOption(1, 4);
 
             //El método switch se utiliza para realizar diferentes acciones según la opción ingresada por el usuario. Las opciones 1, 2 y 3
@@ -118,7 +118,7 @@ public class Menu {
     // Método para crear un nuevo paciente
     public static Patient createNewPatient() {
         String name = Kb.nextLine("Nombre, nuevo paciente: ");
-        String surname = Kb.nextLine("Apellidos, nuevo paciente");
+        String surname = Kb.nextLine("Apellidos, nuevo paciente.");
 
         //TODO
         Integer weight = 55; // Peso del paciente
