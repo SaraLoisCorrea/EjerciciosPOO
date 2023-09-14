@@ -20,9 +20,9 @@ public class PatientProgram {
             System.out.println("    Escriba una opción:");
             System.out.println("===================================");
             System.out.println("1-  Seleccionar un paciente.");
-            System.out.println("2-  Dar de alta un nuevo paciente");
+            System.out.println("2-  Dar de alta un nuevo paciente.");
             System.out.println("3-  Mostrar información de un paciente.");
-            System.out.println("4-  Añadir una dieta");
+            System.out.println("4-  Añadir una dieta.");
             System.out.println("5-  Dar de baja un paciente.");
             System.out.println("6-  Salir del programa.");
 
@@ -85,7 +85,7 @@ public class PatientProgram {
                 option = Kb.forceNextInt();
                 notValid = option < min || option > max;
             } catch (InputMismatchException e) {
-                System.out.println("La opción debe ser un número");
+                System.out.println("La opción debe ser un número.");
                 Kb.nextLine();
             }
             if (notValid) {
