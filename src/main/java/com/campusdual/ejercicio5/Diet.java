@@ -16,6 +16,7 @@ public class Diet {
     private Integer maxCarbs;       // Máximo de carbohidratos permitidos en la dieta
     private Integer maxFats;        // Máximo de grasas permitidas en la dieta
     private Integer maxProteins;        // Máximo de proteínas permitidas en la dieta
+    private String name; // Nombre de la dieta
     private List<Intake> intakes;       // Lista de ingestas de alimentos en la dieta
 
     // Constructor sin parámetros
@@ -175,6 +176,14 @@ public class Diet {
     public void setIntakes(List<Intake> intakes) {
         this.intakes = intakes;
     }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 
     // Método para obtener la descripción de las ingestas de alimentos en la dieta
     public String getDietIntakes() {

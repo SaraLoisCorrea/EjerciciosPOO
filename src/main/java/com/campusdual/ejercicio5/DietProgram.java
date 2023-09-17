@@ -39,7 +39,7 @@ public class DietProgram {
         mainLoop: do {
             System.out.println("Escriba una opción:");
             System.out.println("===================================");
-            System.out.println("1-Crear/reiniciar dieta.");
+            System.out.println("1-Reiniciar dieta.");
             System.out.println("2-Mostrar información de la dieta.");
             System.out.println("3-Agregar alimento al plan actual.");
             System.out.println("4-Volver al menú principal.");
@@ -243,6 +243,7 @@ public class DietProgram {
         if(this.diet!=null){
             System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
             System.out.println("Detalles de la dieta");
+            System.out.println(this.diet.getName());
             System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
             if(this.diet.getMaxCalories()!=null){
                 System.out.println("El número máximo de calorías es:"+this.diet.getMaxCalories());
